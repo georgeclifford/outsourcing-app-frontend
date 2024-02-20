@@ -43,7 +43,7 @@ const PasswordReset = () => {
 								<label htmlFor="floatingPassword2">Confirm Password</label>
 							</div>
 
-							<div className="d-grid py-3">
+							<div className="d-grid pt-3">
 								<button
 									type="submit"
 									className="btn btn-fed shadow-sm">
