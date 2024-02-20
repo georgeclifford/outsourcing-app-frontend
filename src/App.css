@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 }
+
+.bg-fed {
+  background-color: #01468e;
+}
+
+.btn-fed {
+  background-color: #01468e;
+  color: white;
+}
+
+.btn-fed:hover {
+  background-color: #00336a;
+  color: white;
+}
