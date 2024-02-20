@@ -3,6 +3,7 @@ import "./App.css";
 import NavBar from "./components/NavBar";
 import SignIn from "./components/SignIn";
 import PasswordReset from "./components/PasswordReset";
+import AdminHome from "./components/AdminHome";
 
 function App() {
 	return (
@@ -11,6 +12,7 @@ function App() {
 				<Routes>
 					<Route path="/" element={<><NavBar/> <SignIn/></>} />
           <Route path="/passwordreset" element={<><NavBar/> <PasswordReset/></>} />
+          <Route path="/adminhome" element={<><NavBar/> <AdminHome/></>} />
 				</Routes>
 			</BrowserRouter>
 		</div>
