@@ -50,3 +50,16 @@
   background-color: #00336a;
   color: white;
 }
+.text-blue{
+  color: #01468e;
+}
+.icon-text .text {
+  display: none;
+}
+
+.icon-text:hover .text {
+  display: inline;
+}
+.align-left {
+  text-align: left;
+}
