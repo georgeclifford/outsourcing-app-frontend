@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import AddEmployee from "./AddEmployee";
+import EditEmployee from "./EditEmployee";
 
 const EmployeeDetails = () => {
 	return (
@@ -13,13 +15,7 @@ const EmployeeDetails = () => {
 
 				<div className="row mb-3">
 					<div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-						<Link
-							to={"/"}
-							type="button"
-							className="btn btn-outline-dark shadow-sm"
-							title="Add New Employee">
-							Add Employee
-						</Link>
+						<AddEmployee />
 					</div>
 				</div>
 
@@ -47,7 +43,7 @@ const EmployeeDetails = () => {
 							<div className="form-floating">
 								<select
 									className="form-select"
-									id="floatingSelect"
+									id="floatingSelect1"
 									aria-label="Floating label select example">
 									<option defaultValue={"all"}>All</option>
 									<option value="1">Risk Profiling</option>
@@ -56,19 +52,19 @@ const EmployeeDetails = () => {
 									<option value="4">Legal</option>
 									<option value="5">Access Management</option>
 								</select>
-								<label htmlFor="floatingSelect">Designation</label>
+								<label htmlFor="floatingSelect1">Designation</label>
 							</div>
 
 							<div className="form-floating">
 								<select
 									className="form-select"
-									id="floatingSelect"
+									id="floatingSelect2"
 									aria-label="Floating label select example">
 									<option defaultValue={"all"}>All</option>
 									<option value="1">Reviewer</option>
 									<option value="2">Approver</option>
 								</select>
-								<label htmlFor="floatingSelect">Role</label>
+								<label htmlFor="floatingSelect2">Role</label>
 							</div>
 
 							<button
@@ -83,7 +79,7 @@ const EmployeeDetails = () => {
 
 				<div className="row">
 					<div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 table-responsive">
-						<table className="table table-striped table-hover text-nowrap shadow">
+						<table className="table table-striped table-hover text-nowrap shadow mb-4">
 							<thead>
 								<tr>
 									<th scope="col">ID</th>
@@ -102,18 +98,7 @@ const EmployeeDetails = () => {
 									<td>Risk Profiling</td>
 									<td>Reviewer</td>
 									<td>
-										<button
-											type="button"
-											className="btn btn-primary m-1"
-											title="Edit Employee Details">
-											<i className="bi bi-pencil"></i>
-										</button>
-										<button
-											type="button"
-											className="btn btn-danger m-1"
-											title="Deactivate Employee">
-											<i className="bi bi-x-circle"></i>
-										</button>
+										<EditEmployee />
 									</td>
 								</tr>
 
@@ -124,18 +109,7 @@ const EmployeeDetails = () => {
 									<td>Risk Profiling</td>
 									<td>Reviewer</td>
 									<td>
-										<button
-											type="button"
-											className="btn btn-primary m-1"
-											title="Edit Employee Details">
-											<i className="bi bi-pencil"></i>
-										</button>
-										<button
-											type="button"
-											className="btn btn-danger m-1"
-											title="Deactivate Employee">
-											<i className="bi bi-x-circle"></i>
-										</button>
+										<EditEmployee />
 									</td>
 								</tr>
 
@@ -190,18 +164,7 @@ const EmployeeDetails = () => {
 									<td>Risk Profiling</td>
 									<td>Reviewer</td>
 									<td>
-										<button
-											type="button"
-											className="btn btn-primary m-1"
-											title="Edit Employee Details">
-											<i className="bi bi-pencil"></i>
-										</button>
-										<button
-											type="button"
-											className="btn btn-danger m-1"
-											title="Deactivate Employee">
-											<i className="bi bi-x-circle"></i>
-										</button>
+										<EditEmployee />
 									</td>
 								</tr>
 							</tbody>
@@ -209,7 +172,7 @@ const EmployeeDetails = () => {
 					</div>
 				</div>
 
-				<div className="row my-3">
+				<div className="row my-2">
 					<div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
 						<nav aria-label="Page navigation">
 							<ul className="pagination justify-content-end">
@@ -233,7 +196,7 @@ const EmployeeDetails = () => {
 										3
 									</Link>
 								</li>
-                                <li className="page-item">
+								<li className="page-item">
 									<Link className="page-link" to="#">
 										4
 									</Link>
