@@ -1,7 +1,7 @@
 import React from 'react';
 import NavBar from './NavBar';
 import { Link } from 'react-router-dom';
-import SideBar from './SideBar';
+//import SideBar from './SideBar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faBook, faClipboard } from '@fortawesome/free-solid-svg-icons'; // Import the icon
 import { faEdit, faBoxArchive } from '@fortawesome/free-solid-svg-icons';
