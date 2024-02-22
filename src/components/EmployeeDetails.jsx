@@ -2,19 +2,31 @@ import React from "react";
 import { Link } from "react-router-dom";
 import AddEmployee from "./AddEmployee";
 import EditEmployee from "./EditEmployee";
+import ChangeEmpPassword from "./ChangeEmpPassword";
+import NavBar from "./NavBar";
+import Footer from "./Footer";
 
 const EmployeeDetails = () => {
 	return (
-		<div>
-			<div className="container my-5">
+		<div className="d-flex flex-column min-vh-100">
+			<NavBar />
+			<div className="container flex-fill">
 				<div className="row my-5">
 					<div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
 						<h4>Employee Details</h4>
 					</div>
 				</div>
 
-				<div className="row mb-3">
+				<div className="row pb-3">
 					<div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+						<button
+							type="button"
+							className="btn btn-outline-dark shadow-sm"
+							title="Add New Employee"
+							data-bs-toggle="modal"
+							data-bs-target="#addEmployee">
+							Add Employee
+						</button>
 						<AddEmployee />
 					</div>
 				</div>
@@ -98,7 +110,34 @@ const EmployeeDetails = () => {
 									<td>Risk Profiling</td>
 									<td>Reviewer</td>
 									<td>
+										<button
+											type="button"
+											className="btn btn-primary m-1"
+											title="Edit Employee Details"
+											data-bs-toggle="modal"
+											data-bs-target="#editEmployee">
+											<i className="bi bi-pencil"></i>
+										</button>
+
 										<EditEmployee />
+
+										<button
+											type="button"
+											className="btn btn-warning m-1"
+											title="Change Employee Password"
+											data-bs-toggle="modal"
+											data-bs-target="#changePassword">
+											<i className="bi bi-shield-lock"></i>
+										</button>
+
+										<ChangeEmpPassword />
+
+										<button
+											type="button"
+											className="btn btn-danger m-1"
+											title="Deactivate Employee">
+											<i className="bi bi-x-circle"></i>
+										</button>
 									</td>
 								</tr>
 
@@ -109,7 +148,34 @@ const EmployeeDetails = () => {
 									<td>Risk Profiling</td>
 									<td>Reviewer</td>
 									<td>
+										<button
+											type="button"
+											className="btn btn-primary m-1"
+											title="Edit Employee Details"
+											data-bs-toggle="modal"
+											data-bs-target="#editEmployee">
+											<i className="bi bi-pencil"></i>
+										</button>
+
 										<EditEmployee />
+
+										<button
+											type="button"
+											className="btn btn-warning m-1"
+											title="Change Employee Password"
+											data-bs-toggle="modal"
+											data-bs-target="#changePassword">
+											<i className="bi bi-shield-lock"></i>
+										</button>
+
+										<ChangeEmpPassword />
+
+										<button
+											type="button"
+											className="btn btn-danger m-1"
+											title="Deactivate Employee">
+											<i className="bi bi-x-circle"></i>
+										</button>
 									</td>
 								</tr>
 
@@ -123,9 +189,25 @@ const EmployeeDetails = () => {
 										<button
 											type="button"
 											className="btn btn-primary m-1"
-											title="Edit Employee Details">
+											title="Edit Employee Details"
+											data-bs-toggle="modal"
+											data-bs-target="#editEmployee">
 											<i className="bi bi-pencil"></i>
 										</button>
+
+										<EditEmployee />
+
+										<button
+											type="button"
+											className="btn btn-warning m-1"
+											title="Change Employee Password"
+											data-bs-toggle="modal"
+											data-bs-target="#changePassword">
+											<i className="bi bi-shield-lock"></i>
+										</button>
+
+										<ChangeEmpPassword />
+
 										<button
 											type="button"
 											className="btn btn-success m-1"
@@ -145,9 +227,25 @@ const EmployeeDetails = () => {
 										<button
 											type="button"
 											className="btn btn-primary m-1"
-											title="Edit Employee Details">
+											title="Edit Employee Details"
+											data-bs-toggle="modal"
+											data-bs-target="#editEmployee">
 											<i className="bi bi-pencil"></i>
 										</button>
+
+										<EditEmployee />
+
+										<button
+											type="button"
+											className="btn btn-warning m-1"
+											title="Change Employee Password"
+											data-bs-toggle="modal"
+											data-bs-target="#changePassword">
+											<i className="bi bi-shield-lock"></i>
+										</button>
+
+										<ChangeEmpPassword />
+
 										<button
 											type="button"
 											className="btn btn-success m-1"
@@ -164,7 +262,34 @@ const EmployeeDetails = () => {
 									<td>Risk Profiling</td>
 									<td>Reviewer</td>
 									<td>
+										<button
+											type="button"
+											className="btn btn-primary m-1"
+											title="Edit Employee Details"
+											data-bs-toggle="modal"
+											data-bs-target="#editEmployee">
+											<i className="bi bi-pencil"></i>
+										</button>
+
 										<EditEmployee />
+
+										<button
+											type="button"
+											className="btn btn-warning m-1"
+											title="Change Employee Password"
+											data-bs-toggle="modal"
+											data-bs-target="#changePassword">
+											<i className="bi bi-shield-lock"></i>
+										</button>
+
+										<ChangeEmpPassword />
+
+										<button
+											type="button"
+											className="btn btn-danger m-1"
+											title="Deactivate Employee">
+											<i className="bi bi-x-circle"></i>
+										</button>
 									</td>
 								</tr>
 							</tbody>
@@ -172,7 +297,7 @@ const EmployeeDetails = () => {
 					</div>
 				</div>
 
-				<div className="row my-2">
+				<div className="row mt-2 mb-5">
 					<div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
 						<nav aria-label="Page navigation">
 							<ul className="pagination justify-content-end">
@@ -216,6 +341,7 @@ const EmployeeDetails = () => {
 					</div>
 				</div>
 			</div>
+			<Footer />
 		</div>
 	);
 };

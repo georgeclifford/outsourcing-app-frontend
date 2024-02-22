@@ -19,7 +19,7 @@ const NavBar = () => {
 					</Link>
 				</div>
 			</nav>
-			<div className="container-fluid py-1" style={{ backgroundColor: "#f7a600" }} />
+			<div className="container-fluid pt-1" style={{ backgroundColor: "#f7a600" }} />
 		</div>
 	);
 };

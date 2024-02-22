@@ -3,15 +3,6 @@ import React from "react";
 const AddEmployee = () => {
 	return (
 		<div>
-			<button
-				type="button"
-				className="btn btn-outline-dark shadow-sm"
-				title="Add New Employee"
-				data-bs-toggle="modal"
-				data-bs-target="#addEmployee">
-				Add Employee
-			</button>
-
 			<div
 				className="modal fade modal-lg"
 				id="addEmployee"

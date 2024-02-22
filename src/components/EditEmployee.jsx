@@ -2,20 +2,7 @@ import React from "react";
 
 const EditEmployee = () => {
 	return (
-		<div>
-			<button
-				type="button"
-				className="btn btn-primary m-1"
-				title="Edit Employee Details"
-				data-bs-toggle="modal"
-				data-bs-target="#editEmployee">
-				<i className="bi bi-pencil"></i>
-			</button>
-
-			<button type="button" className="btn btn-danger m-1" title="Deactivate Employee">
-				<i className="bi bi-x-circle"></i>
-			</button>
-
+		<div className="d-inline">
 			<div
 				className="modal fade modal-lg"
 				id="editEmployee"
@@ -94,44 +81,7 @@ const EditEmployee = () => {
 											<label htmlFor="floatingInput5">Email</label>
 										</div>
 									</div>
-
-									<div className="col col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4">
-										<div className="form-floating">
-											<input
-												type="password"
-												className="form-control shadow-sm"
-												id="floatingPassword3"
-												placeholder="Password"
-											/>
-											<label htmlFor="floatingPassword3">Old Password</label>
-										</div>
-									</div>
-
-									<div className="col col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4">
-										<div className="form-floating">
-											<input
-												type="password"
-												className="form-control shadow-sm"
-												id="floatingPassword4"
-												placeholder="Password"
-											/>
-											<label htmlFor="floatingPassword4">New Password</label>
-										</div>
-									</div>
-
-									<div className="col col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4">
-										<div className="form-floating">
-											<input
-												type="password"
-												className="form-control shadow-sm"
-												id="floatingPassword5"
-												placeholder="Password"
-											/>
-											<label htmlFor="floatingPassword5">
-												Confirm Password
-											</label>
-										</div>
-									</div>
+                                    
 								</div>
 							</div>
 						</div>
