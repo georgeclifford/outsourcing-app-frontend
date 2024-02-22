@@ -63,3 +63,13 @@
 .align-left {
 	text-align: left;
 }
+.btn-outline-custom:hover{
+    color: #ffffff; 
+    background-color: #01468e; 
+    border-color: #01468e; 
+}
+.btn-outline-custom {
+    border-color: #01468e; /* Navy blue border color */
+}
+	
+	
