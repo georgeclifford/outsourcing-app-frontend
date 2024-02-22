@@ -50,7 +50,6 @@ const VendorHome = () => {
                                 to="/vendoraudit"
                                 className="nav-link fs-5 text-blue"
                                 aria-current="page">
-
                                 <FontAwesomeIcon icon={faClipboard} style={{ color: "#f7a600" }} />
                                 <span className="ms-2">Vendor Audit</span>
                             </Link>
