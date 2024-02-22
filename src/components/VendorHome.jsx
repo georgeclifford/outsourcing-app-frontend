@@ -30,7 +30,7 @@ const VendorHome = () => {
                                 to="/addvendor"
                                 className="nav-link fs-5 text-blue"
                                 aria-current="page">
-                                <FontAwesomeIcon icon={faHome} style={{ color: "#f7a600" }} />{" "}
+                                <FontAwesomeIcon icon={faHome} style={{ color: "#f7a600" }} />
 
                                 <span className="ms-2">Home</span>
                             </Link>
