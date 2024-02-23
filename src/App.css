@@ -63,12 +63,12 @@
 .align-left {
 	text-align: left;
 }
-.btn-outline-custom:hover{
+.btn-outline-fed:hover{
     color: #ffffff; 
     background-color: #01468e; 
     border-color: #01468e; 
 }
-.btn-outline-custom {
+.btn-outline-fed {
     border-color: #01468e; 
 }
 .active {

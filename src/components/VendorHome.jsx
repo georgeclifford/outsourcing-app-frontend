@@ -88,7 +88,7 @@ const VendorHome = () => {
 
 												<button
 													type="button"
-													className="btn btn-outline-custom"
+													className="btn btn-outline-fed"
 													title="Search">
 													<i className="bi bi-search"></i>
 												</button>
@@ -129,7 +129,7 @@ const VendorHome = () => {
 
 												<button
 													type="button"
-													className="btn btn-outline-custom"
+													className="btn btn-outline-fed"
 													title="Apply Filters">
 													<i className="bi bi-arrow-return-right"></i>
 												</button>
