@@ -22,7 +22,7 @@ const AddVendor = () => {
                         <Nav className="me-auto">
                             <Nav.Link href="/addvendor" className={location.pathname === "/addvendor" ? "active" : ""} style={{ color: location.pathname === "/addvendor" ? "green" : "" }} ><b>Communication Details</b></Nav.Link>
                             <Nav.Link href="/serviceprovider"><b>Service Provider</b></Nav.Link>
-                            <Nav.Link href="/riskdetails"><b>Risk/Materiality Assessment</b></Nav.Link>
+                            <Nav.Link href="/risk"><b>Risk/Materiality Assessment</b></Nav.Link>
                             <Nav.Link href="/arrangementdetails"><b>Arrangement Details</b></Nav.Link>
                             <Nav.Link href="/esg"><b>ESG</b></Nav.Link>
                             <Nav.Link href="/documentdetails"><b>Document Details</b></Nav.Link>
@@ -121,9 +121,10 @@ const AddVendor = () => {
                                 </select>
                         </div>
                         <br />
-                        <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 d-flex justify-content-left gap-2" >
-                        <Link to="/serviceprovider" className="btn btn-success">Save</Link>
-                            <button className="btn btn-danger">Cancel</button>
+                        <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 d-flex justify-content-end gap-2" >
+                        
+                            <button className="btn btn-danger">Clear</button>
+                            <Link to="/serviceprovider" className="btn btn-success">Save</Link>
                         </div>
                     </div>
                 </div>

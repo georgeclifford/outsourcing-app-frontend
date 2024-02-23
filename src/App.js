@@ -10,6 +10,9 @@ import AddVendor from "./components/AddVendor";
 import ServiceProviderDetails from "./components/ServiceProviderDetails";
 import Footer from "./components/Footer";
 import OutsourcingManagement from "./components/OutsourcingManagement";
+import RiskAssessment from "./components/RiskAssessment";
+import MaterialityAssess from "./components/MaterialityAssess";
+import ArrangementDetails from "./components/ArrangementDetails";
 
 function App() {
 	return (
@@ -24,6 +27,9 @@ function App() {
           <Route path="/outsrcmanage" element={<OutsourcingManagement />} />
 					<Route path="/addvendor" element={<><NavBar /> <AddVendor /> <Footer/></>} />
 					<Route path="/serviceprovider" element={<><NavBar /> <ServiceProviderDetails /> <Footer/></>} />
+					<Route path="/risk" element={<><NavBar /> <RiskAssessment /> <Footer/></>} />
+					<Route path="/materiality" element={<><NavBar /> <MaterialityAssess /> <Footer/></>} />
+					<Route path="/arrangementdetails" element={<><NavBar /> <ArrangementDetails /> <Footer/></>} />
 				</Routes>
 			</BrowserRouter>
 		</div>
