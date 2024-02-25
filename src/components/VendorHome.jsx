@@ -1,9 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-//import SideBar from './SideBar';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome, faBook, faClipboard } from "@fortawesome/free-solid-svg-icons"; // Import the icon
-//import { faEdit, faBoxArchive } from "@fortawesome/free-solid-svg-icons";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
 import AddVendorSidebar from "./AddVendorSidebar";
@@ -35,7 +31,7 @@ const VendorHome = () => {
 	}, []);
 	return (
 		<div className="d-flex flex-column min-vh-100">
-			<NavBar isLogin={true} />
+			<NavBar isLogin={true} isSidebar={true}/>
 			<div className="container-fluid flex-fill">
 				<div className="row">
 				<div className="col-lg-2 col-xl-2 col-xxl-2 p-0 shadow">
