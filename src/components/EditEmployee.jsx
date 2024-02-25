@@ -93,7 +93,7 @@ const EditEmployee = () => {
 								Cancel
 							</button>
 							<button type="button" className="btn btn-success">
-								Add
+								Save
 							</button>
 						</div>
 					</div>

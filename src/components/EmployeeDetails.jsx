@@ -11,9 +11,12 @@ const EmployeeDetails = () => {
 		<div className="d-flex flex-column min-vh-100">
 			<NavBar />
 			<div className="container flex-fill">
-				<div className="row my-5">
-					<div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
-						<h4>Employee Details</h4>
+				<div className="row my-3">
+					<div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+						<Link className="btn btn-outline-fed" title="Go To Previous Page" to={"/adminhome"}>
+							<i className="bi bi-arrow-left"></i>
+						</Link>
+						<h4 className="text-center">Employee Details</h4>
 					</div>
 				</div>
 
@@ -21,7 +24,7 @@ const EmployeeDetails = () => {
 					<div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
 						<button
 							type="button"
-							className="btn btn-outline-dark shadow-sm"
+							className="btn btn-outline-fed shadow-sm"
 							title="Add New Employee"
 							data-bs-toggle="modal"
 							data-bs-target="#addEmployee">
@@ -44,7 +47,7 @@ const EmployeeDetails = () => {
 								<label htmlFor="floatingInput">Search</label>
 							</div>
 
-							<button type="button" className="btn btn-outline-dark" title="Search">
+							<button type="button" className="btn btn-outline-fed" title="Search">
 								<i className="bi bi-search"></i>
 							</button>
 						</div>
@@ -81,7 +84,7 @@ const EmployeeDetails = () => {
 
 							<button
 								type="button"
-								className="btn btn-outline-dark"
+								className="btn btn-outline-fed"
 								title="Apply Filters">
 								<i className="bi bi-arrow-return-right"></i>
 							</button>
@@ -302,37 +305,37 @@ const EmployeeDetails = () => {
 						<nav aria-label="Page navigation">
 							<ul className="pagination justify-content-end">
 								<li className="page-item">
-									<Link className="page-link" to="#" aria-label="Previous">
+									<Link className="page-link  text-fed" to="#" aria-label="Previous">
 										<span aria-hidden="true">&laquo;</span>
 									</Link>
 								</li>
 								<li className="page-item">
-									<Link className="page-link active" aria-current="page" to="#">
+									<Link className="page-link btn-fed" aria-current="page" to="#">
 										1
 									</Link>
 								</li>
 								<li className="page-item">
-									<Link className="page-link" to="#">
+									<Link className="page-link text-fed" to="#">
 										2
 									</Link>
 								</li>
 								<li className="page-item">
-									<Link className="page-link" to="#">
+									<Link className="page-link text-fed" to="#">
 										3
 									</Link>
 								</li>
 								<li className="page-item">
-									<Link className="page-link" to="#">
+									<Link className="page-link text-fed" to="#">
 										4
 									</Link>
 								</li>
 								<li className="page-item">
-									<Link className="page-link" to="#">
+									<Link className="page-link text-fed" to="#">
 										5
 									</Link>
 								</li>
 								<li className="page-item">
-									<Link className="page-link" to="#" aria-label="Next">
+									<Link className="page-link text-fed" to="#" aria-label="Next">
 										<span aria-hidden="true">&raquo;</span>
 									</Link>
 								</li>

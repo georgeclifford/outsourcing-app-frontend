@@ -12,9 +12,15 @@ const OutsourcingManagement = () => {
 		<div className="d-flex flex-column min-vh-100">
 			<NavBar />
 			<div className="container g-5 flex-fill">
-				<div className="row my-5">
-					<div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
-						<h4>Outsourcing Management</h4>
+				<div className="row mt-3 mb-5 ">
+					<div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+						<Link
+							className="btn btn-outline-fed"
+							title="Go To Previous Page"
+							to={"/adminhome"}>
+							<i className="bi bi-arrow-left"></i>
+						</Link>
+						<h4 className="text-center">Outsourcing Management</h4>
 					</div>
 				</div>
 
@@ -22,7 +28,7 @@ const OutsourcingManagement = () => {
 					<div className="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
 						<Link
 							className="link-offset-2 link-underline link-underline-opacity-0"
-							to={"/financialousrc"}>
+							to={"/financialoutsrc"}>
 							<div className="card shadow h-100">
 								<img
 									src={finance_img}
@@ -30,7 +36,9 @@ const OutsourcingManagement = () => {
 									alt="Financial Outsourcing"
 								/>
 								<div className="card-body">
-									<h5 className="card-title text-center">Financial Outsourcing</h5>
+									<h5 className="card-title text-center">
+										Financial Outsourcing
+									</h5>
 								</div>
 							</div>
 						</Link>
@@ -64,7 +72,9 @@ const OutsourcingManagement = () => {
 									alt="Housekeeping Outsourcing"
 								/>
 								<div className="card-body">
-									<h5 className="card-title text-center">Housekeeping Outsourcing</h5>
+									<h5 className="card-title text-center">
+										Housekeeping Outsourcing
+									</h5>
 								</div>
 							</div>
 						</Link>

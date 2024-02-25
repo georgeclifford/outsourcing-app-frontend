@@ -21,7 +21,7 @@ const VendorHome = () => {
 							borderRight: "1px solid #ccc",
 							boxShadow: "2px 0 5px rgba(0, 0, 0, 0.1)",
 						}}>
-						<Link className="text-decoration-none text-blue d-flex align-items-center">
+						<Link className="text-decoration-none text-fed d-flex align-items-center">
 							<span className="ms-3 fs-5 text-center">
 								<b>DASHBOARD</b>
 							</span>
@@ -31,7 +31,7 @@ const VendorHome = () => {
 							<li className="nav-item fs-4">
 								<Link
 									to="/addvendor"
-									className="nav-link fs-5 text-blue"
+									className="nav-link fs-5 text-fed"
 									aria-current="page">
 									<FontAwesomeIcon icon={faHome} style={{ color: "#f7a600" }} />
 
@@ -41,7 +41,7 @@ const VendorHome = () => {
 							<li className="nav-item fs-4">
 								<Link
 									to="/addvendor"
-									className="nav-link fs-5 text-blue"
+									className="nav-link fs-5 text-fed"
 									aria-current="page">
 									<FontAwesomeIcon icon={faBook} style={{ color: "#f7a600" }} />
 									<span className="ms-2">Add Vendor</span>
@@ -50,7 +50,7 @@ const VendorHome = () => {
 							<li className="nav-item fs-4">
 								<Link
 									to="/vendoraudit"
-									className="nav-link fs-5 text-blue"
+									className="nav-link fs-5 text-fed"
 									aria-current="page">
 									<FontAwesomeIcon
 										icon={faClipboard}

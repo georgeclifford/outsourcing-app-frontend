@@ -37,20 +37,7 @@
 	}
 }
 
-.bg-fed {
-	background-color: #01468e;
-}
-
-.btn-fed {
-	background-color: #01468e;
-	color: white;
-}
-
-.btn-fed:hover {
-	background-color: #00336a;
-	color: white;
-}
-.text-blue {
+.text-fed {
 	color: #01468e;
 }
 .icon-text .text {
@@ -63,15 +50,48 @@
 .align-left {
 	text-align: left;
 }
-.btn-outline-fed:hover{
-    color: #ffffff; 
-    background-color: #01468e; 
-    border-color: #01468e; 
+
+.bg-fed {
+	background-color: #01468e;
+}
+
+.btn-fed {
+	color: #ffffff;
+	background-color: #01468e;
+}
+
+.btn-fed:hover {
+	background-color: #002c5c;
+	color: white;
+}
+
+.btn-outline-fed:hover {
+	color: #ffffff;
+	background-color: #01468e;
+	border-color: #01468e;
 }
 .btn-outline-fed {
-    border-color: #01468e; 
+	border-color: #01468e;
 }
 .active {
-	color: green !important; 
-  }	
-	
+	color: green !important;
+}
+
+.sidebar {
+	height: 100%;
+	transition: all 0.3s ease;
+  }
+  
+  .sidebar .nav .nav-item .nav-link {
+	color: #fff;
+	background-color: #003b7b;
+	margin: 5px 15px;
+	padding: 15px 20px;
+	border-radius: 0.5rem;
+	transition: all 0.3s ease;
+  }
+  
+  .sidebar .nav .nav-item .nav-link:hover {
+	background-color: #002c5c;
+	border-left: 5px solid #f7a600;
+  }
