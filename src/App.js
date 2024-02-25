@@ -14,6 +14,7 @@ import RiskAssessment from "./components/RiskAssessment";
 import MaterialityAssess from "./components/MaterialityAssess";
 import ArrangementDetails from "./components/ArrangementDetails";
 import FinancialOutsourcing from "./components/FinancialOutsourcing";
+import SLAUpload from "./components/SLAUpload";
 
 function App() {
 	return (
@@ -32,6 +33,7 @@ function App() {
 					<Route path="/materiality" element={<><NavBar /> <MaterialityAssess /> <Footer/></>} />
 					<Route path="/arrangementdetails" element={<><NavBar /> <ArrangementDetails /> <Footer/></>} />
 					<Route path="/financialoutsrc" element={<FinancialOutsourcing />} />
+					<Route path="/slaupload" element={<SLAUpload />} />
 				</Routes>
 			</BrowserRouter>
 		</div>

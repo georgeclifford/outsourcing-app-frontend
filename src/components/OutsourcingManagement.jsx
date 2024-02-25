@@ -10,12 +10,12 @@ import security_img from "../assets/images/security.jpeg";
 const OutsourcingManagement = () => {
 	return (
 		<div className="d-flex flex-column min-vh-100">
-			<NavBar />
+			<NavBar isLogin={true} />
 			<div className="container g-5 flex-fill">
-				<div className="row mt-3 mb-5 ">
+				<div className="row mt-3 mb-5">
 					<div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
 						<Link
-							className="btn btn-outline-fed"
+							className="btn btn-outline-fed btn-circle"
 							title="Go To Previous Page"
 							to={"/adminhome"}>
 							<i className="bi bi-arrow-left"></i>

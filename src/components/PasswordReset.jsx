@@ -6,7 +6,7 @@ import Footer from "./Footer";
 const PasswordReset = () => {
 	return (
 		<div className="d-flex flex-column min-vh-100">
-			<NavBar />
+			<NavBar isLogin={false} />
 			<div
 				className="flex-fill"
 				style={{

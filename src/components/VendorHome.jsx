@@ -35,7 +35,7 @@ const VendorHome = () => {
 	}, []);
 	return (
 		<div className="d-flex flex-column min-vh-100">
-			<NavBar />
+			<NavBar isLogin={true} />
 			<div className="container-fluid flex-fill">
 				<div className="row">
 				<div className="col-lg-2 col-xl-2 col-xxl-2 p-0 shadow">
