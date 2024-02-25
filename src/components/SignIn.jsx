@@ -7,7 +7,7 @@ import Footer from "./Footer";
 const SignIn = () => {
 	return (
 		<div className="d-flex flex-column min-vh-100">
-			<NavBar />
+			<NavBar isLogin={false} />
 			<div
 				className="flex-fill"
 				style={{

@@ -9,7 +9,7 @@ import Footer from "./Footer";
 const VendorHome = () => {
 	return (
 		<div className="d-flex flex-column min-vh-100">
-			<NavBar />
+			<NavBar isLogin={true} />
 			<div className="container-fluid flex-fill">
 				<div className="row">
 					{/* Sidebar */}

@@ -1,32 +1,47 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Sidebar = ({ isLarge }) => {
-	if (isLarge) {
+const Sidebar = (props) => {
+	if (props.isLarge) {
 		return (
 			<div className="sidebar bg-fed">
 				<div className="text-light px-3 pt-3">
 					<h4 className="m-0">Financial Outsourcing</h4>
-                    <hr />
+					<hr />
 				</div>
 				<ul className="nav flex-column">
-					<li className="nav-item ">
-						<Link className="nav-link" href="#">
-							Request Submission
-						</Link>
+					<li className="nav-item">
+						{props.isTab === "Request Sub" ? (
+							<Link className="nav-link active" to="#">
+								Request Submission
+							</Link>
+						) : (
+							<Link className="nav-link" to="/financialoutsrc">
+								Request Submission
+							</Link>
+						)}
 					</li>
 					<li className="nav-item">
-						<Link className="nav-link" href="#">
+						<Link className="nav-link" to="#">
 							Agreement Status
 						</Link>
 					</li>
 					<li className="nav-item">
-						<Link className="nav-link" href="#">
+						{props.isTab === "SLA" ? (
+							<Link className="nav-link active" to="#">
+								SLA Upload
+							</Link>
+						) : (
+							<Link className="nav-link" to="/slaupload">
+								SLA Upload
+							</Link>
+						)}
+						<Link className="nav-link" to="#">
 							SLA Upload
 						</Link>
 					</li>
 					<li className="nav-item">
-						<Link className="nav-link" href="#">
+						<Link className="nav-link" to="#">
 							Sanction Order
 						</Link>
 					</li>
@@ -55,22 +70,34 @@ const Sidebar = ({ isLarge }) => {
 				<div className="sidebar offcanvas-body">
 					<ul className="nav flex-column">
 						<li className="nav-item ">
-							<Link className="nav-link" href="#">
-								Request Submission
-							</Link>
+							{props.isTab === "Request Sub" ? (
+								<Link className="nav-link active" to="#">
+									Request Submission
+								</Link>
+							) : (
+								<Link className="nav-link" to="/financialoutsrc">
+									Request Submission
+								</Link>
+							)}
 						</li>
 						<li className="nav-item">
-							<Link className="nav-link" href="#">
+							<Link className="nav-link" to="#">
 								Agreement Status
 							</Link>
 						</li>
 						<li className="nav-item">
-							<Link className="nav-link" href="#">
-								SLA Upload
-							</Link>
+							{props.isTab === "SLA" ? (
+								<Link className="nav-link active" to="#">
+									SLA Upload
+								</Link>
+							) : (
+								<Link className="nav-link" to="/slaupload">
+									SLA Upload
+								</Link>
+							)}
 						</li>
 						<li className="nav-item">
-							<Link className="nav-link" href="#">
+							<Link className="nav-link" to="#">
 								Sanction Order
 							</Link>
 						</li>

@@ -9,18 +9,21 @@ import Footer from "./Footer";
 const EmployeeDetails = () => {
 	return (
 		<div className="d-flex flex-column min-vh-100">
-			<NavBar />
+			<NavBar isLogin={true} />
 			<div className="container flex-fill">
 				<div className="row my-3">
 					<div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-						<Link className="btn btn-outline-fed" title="Go To Previous Page" to={"/adminhome"}>
+						<Link
+							className="btn btn-outline-fed btn-circle"
+							title="Go To Previous Page"
+							to="/adminhome">
 							<i className="bi bi-arrow-left"></i>
 						</Link>
 						<h4 className="text-center">Employee Details</h4>
 					</div>
 				</div>
 
-				<div className="row pb-3">
+				<div className="row mb-3">
 					<div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
 						<button
 							type="button"
@@ -34,19 +37,10 @@ const EmployeeDetails = () => {
 					</div>
 				</div>
 
-				<div className="row g-3 mb-3 justify-content-between">
+				<div className="row g-3 mb-4 justify-content-between">
 					<div className="col col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
 						<div className="input-group shadow-sm rounded">
-							<div className="form-floating">
-								<input
-									type="text"
-									className="form-control"
-									id="floatingInput"
-									placeholder="Search"
-								/>
-								<label htmlFor="floatingInput">Search</label>
-							</div>
-
+							<input type="text" className="form-control" placeholder="Search" />
 							<button type="button" className="btn btn-outline-fed" title="Search">
 								<i className="bi bi-search"></i>
 							</button>
@@ -55,32 +49,26 @@ const EmployeeDetails = () => {
 
 					<div className="col col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4">
 						<div className="input-group shadow-sm rounded">
-							<div className="form-floating">
-								<select
-									className="form-select"
-									id="floatingSelect1"
-									aria-label="Floating label select example">
-									<option defaultValue={"all"}>All</option>
-									<option value="1">Risk Profiling</option>
-									<option value="2">Feasibiliy</option>
-									<option value="3">Compliance</option>
-									<option value="4">Legal</option>
-									<option value="5">Access Management</option>
-								</select>
-								<label htmlFor="floatingSelect1">Designation</label>
-							</div>
+							<label className="input-group-text" htmlFor="inputGroupSelect01">
+								Designation :
+							</label>
+							<select className="form-select" id="inputGroupSelect01">
+								<option defaultValue={"all"}>All</option>
+								<option value="1">Risk Profiling</option>
+								<option value="2">Feasibiliy</option>
+								<option value="3">Compliance</option>
+								<option value="4">Legal</option>
+								<option value="5">Access Management</option>
+							</select>
 
-							<div className="form-floating">
-								<select
-									className="form-select"
-									id="floatingSelect2"
-									aria-label="Floating label select example">
-									<option defaultValue={"all"}>All</option>
-									<option value="1">Reviewer</option>
-									<option value="2">Approver</option>
-								</select>
-								<label htmlFor="floatingSelect2">Role</label>
-							</div>
+							<label className="input-group-text" htmlFor="inputGroupSelect02">
+								Role :
+							</label>
+							<select className="form-select" id="inputGroupSelect02">
+								<option defaultValue={"all"}>All</option>
+								<option value="1">Reviewer</option>
+								<option value="2">Approver</option>
+							</select>
 
 							<button
 								type="button"
@@ -94,7 +82,7 @@ const EmployeeDetails = () => {
 
 				<div className="row">
 					<div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 table-responsive">
-						<table className="table table-striped table-hover text-nowrap shadow mb-4">
+						<table className="table table-striped table-hover align-middle text-nowrap shadow mb-4">
 							<thead>
 								<tr>
 									<th scope="col">ID</th>
@@ -305,7 +293,10 @@ const EmployeeDetails = () => {
 						<nav aria-label="Page navigation">
 							<ul className="pagination justify-content-end">
 								<li className="page-item">
-									<Link className="page-link  text-fed" to="#" aria-label="Previous">
+									<Link
+										className="page-link  text-fed"
+										to="#"
+										aria-label="Previous">
 										<span aria-hidden="true">&laquo;</span>
 									</Link>
 								</li>
