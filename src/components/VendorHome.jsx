@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 //import SideBar from './SideBar';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -6,72 +6,70 @@ import { faHome, faBook, faClipboard } from "@fortawesome/free-solid-svg-icons";
 //import { faEdit, faBoxArchive } from "@fortawesome/free-solid-svg-icons";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
+import AddVendorSidebar from "./AddVendorSidebar";
+
+
 const VendorHome = () => {
+	const [isLargeWindow, setisLargeWindow] = useState(true); // Initially open for larger screens
+
+	useEffect(() => {
+		const handleResize = () => {
+			// Close sidebar on smaller screens
+			if (window.innerWidth < 992) {
+				setisLargeWindow(false);
+			} else {
+				setisLargeWindow(true);
+			}
+		};
+
+		// Add event listener for window resize
+		window.addEventListener("resize", handleResize);
+
+		// Call handleResize once on initial render
+		handleResize();
+
+		// Cleanup event listener on component unmount
+		return () => {
+			window.removeEventListener("resize", handleResize);
+		};
+	}, []);
 	return (
 		<div className="d-flex flex-column min-vh-100">
 			<NavBar />
 			<div className="container-fluid flex-fill">
 				<div className="row">
-					{/* Sidebar */}
-					<div
-						className="bg-white col-auto col-md-2 min-vh-100"
-						style={{
-							padding: "20px 0",
-							width: "200px",
-							borderRight: "1px solid #ccc",
-							boxShadow: "2px 0 5px rgba(0, 0, 0, 0.1)",
-						}}>
-						<Link className="text-decoration-none text-fed d-flex align-items-center">
-							<span className="ms-3 fs-5 text-center">
-								<b>DASHBOARD</b>
-							</span>
-						</Link>
-						<br />
-						<ul className="nav nav-pills flex-column">
-							<li className="nav-item fs-4">
-								<Link
-									to="/addvendor"
-									className="nav-link fs-5 text-fed"
-									aria-current="page">
-									<FontAwesomeIcon icon={faHome} style={{ color: "#f7a600" }} />
-
-									<span className="ms-2">Home</span>
-								</Link>
-							</li>
-							<li className="nav-item fs-4">
-								<Link
-									to="/addvendor"
-									className="nav-link fs-5 text-fed"
-									aria-current="page">
-									<FontAwesomeIcon icon={faBook} style={{ color: "#f7a600" }} />
-									<span className="ms-2">Add Vendor</span>
-								</Link>
-							</li>
-							<li className="nav-item fs-4">
-								<Link
-									to="/vendoraudit"
-									className="nav-link fs-5 text-fed"
-									aria-current="page">
-									<FontAwesomeIcon
-										icon={faClipboard}
-										style={{ color: "#f7a600" }}
-									/>
-									<span className="ms-2">Vendor Audit</span>
-								</Link>
-							</li>
-						</ul>
+				<div className="col-lg-2 col-xl-2 col-xxl-2 p-0 shadow">
+						{window.innerWidth < 992 ? (
+							// Render offcanvas sidebar for smaller screens
+							<AddVendorSidebar
+								isLarge={false}
+								toggleSidebar={() => setisLargeWindow(!isLargeWindow)}
+							/>
+						) : (
+							// Render sidebar as part of body for larger screens
+							<AddVendorSidebar isLarge={true} />
+						)}
 					</div>
 					{/* Main Content */}
 					<main className="col-md-10">
 						<div className="container">
+						<div className="row my-3">
+								<div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+									<Link
+										className="btn btn-outline-fed"
+										title="Go To Previous Page"
+										to={"/adminhome"}>
+										<i className="bi bi-arrow-left"></i>
+									</Link>
+									<h2 className="text-center"style={{ color: "#01468e" }}><b>VENDOR MANAGEMENT</b></h2>
+								</div>
+							</div>
 							<br />
 							<div className="row">
 								<div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
-									<h2 style={{ color: "#01468e" }}>
-										<b>VENDOR MANAGEMENT</b>
-									</h2>
+									
 									<br />
-									<br />
+							
 
 									<div className="row g-3 mb-3 justify-content-between">
 										<div className="col col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
@@ -137,7 +135,7 @@ const VendorHome = () => {
 										</div>
 									</div>
 									<div className="row g-3">
-										<div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+										<div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 table-responsive">
 											<h5 style={{ textAlign: "left" }}>
 												List of vendors onboard
 											</h5>
@@ -280,38 +278,40 @@ const VendorHome = () => {
 								</div>
 							</div>
 						</div>
-					</main>
-					<div className="col-md-10 mx-auto mt-3 d-flex justify-content-end">
+						<div className="col-md-10 mx-auto mt-3 d-flex justify-content-end">
 						<nav aria-label="Page navigation example">
 							<ul className="pagination">
 								<li className="page-item">
-									<Link className="page-link" to="#" aria-label="Previous">
+									<Link className="page-link text-fed" 
+									to="#" aria-label="Previous">
 										<span aria-hidden="true">&laquo;</span>
 									</Link>
 								</li>
 								<li className="page-item">
-									<Link className="page-link" to="#">
+									<Link className="page-link btn-fed" to="#">
 										1
 									</Link>
 								</li>
 								<li className="page-item">
-									<Link className="page-link" to="#">
+									<Link className="page-link text-fed" to="#">
 										2
 									</Link>
 								</li>
 								<li className="page-item">
-									<Link className="page-link" to="#">
+									<Link className="page-link text-fed" to="#">
 										3
 									</Link>
 								</li>
 								<li className="page-item">
-									<Link className="page-link" to="#" aria-label="Next">
+									<Link className="page-link text-fed" to="#" aria-label="Next">
 										<span aria-hidden="true">&raquo;</span>
 									</Link>
 								</li>
 							</ul>
 						</nav>
 					</div>
+					</main>
+					
 				</div>
 			</div>
 			<Footer />
