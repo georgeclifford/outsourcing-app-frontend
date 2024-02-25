@@ -38,7 +38,7 @@ const RiskAssessment = () => {
                 <h5><b>Risk Assessment</b></h5><br />
                 <div className="row">
                     <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                        <table class="table" style={{ borderSpacing: '20px',boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.1)', border: '1px solid rgba(0, 0, 0, 0.1)' }}>
+                        <table className="table" style={{ borderSpacing: '20px',boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.1)', border: '1px solid rgba(0, 0, 0, 0.1)' }}>
                             <thead>
                                 <tr style={{ textAlign: 'justified' }}>
                                     <th scope="col" style={{ width: '20%' }}>Type of Risk</th>

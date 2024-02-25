@@ -6,7 +6,7 @@ const NavBar = (props) => {
 	return (
 		<div>
 			<nav className="navbar bg-fed p-0" data-bs-theme="dark">
-				<div className="container-fluid mx-3 my-2">
+				<div className="container-fluid m-2">
 					{props.isSidebar ? (
 						<button
 							className="navbar-toggler d-lg-none"

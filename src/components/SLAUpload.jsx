@@ -143,13 +143,13 @@ const SLAUpload = () => {
 												<td>Pending</td>
 												<td></td>
 												<td>
-													<div class="input-group">
+													<div className="input-group">
 														<input
-															class="form-control form-control-sm"
+															className="form-control form-control-sm"
 															type="file"
 														/>
 														<button
-															class="btn btn-outline-fed btn-sm"
+															className="btn btn-outline-fed btn-sm"
 															type="button"
 															title="Submit"
 															id="inputGroupFileAddon04">
@@ -169,13 +169,13 @@ const SLAUpload = () => {
 												<td>Pending</td>
 												<td></td>
 												<td>
-													<div class="input-group">
+													<div className="input-group">
 														<input
-															class="form-control form-control-sm"
+															className="form-control form-control-sm"
 															type="file"
 														/>
 														<button
-															class="btn btn-outline-fed btn-sm"
+															className="btn btn-outline-fed btn-sm"
 															type="button"
 															title="Submit"
 															id="inputGroupFileAddon04">
@@ -195,13 +195,13 @@ const SLAUpload = () => {
 												<td>Pending</td>
 												<td></td>
 												<td>
-													<div class="input-group">
+													<div className="input-group">
 														<input
-															class="form-control form-control-sm"
+															className="form-control form-control-sm"
 															type="file"
 														/>
 														<button
-															class="btn btn-outline-fed btn-sm"
+															className="btn btn-outline-fed btn-sm"
 															type="button"
 															title="Submit"
 															id="inputGroupFileAddon04">
@@ -221,13 +221,13 @@ const SLAUpload = () => {
 												<td>Pending</td>
 												<td></td>
 												<td>
-													<div class="input-group">
+													<div className="input-group">
 														<input
-															class="form-control form-control-sm"
+															className="form-control form-control-sm"
 															type="file"
 														/>
 														<button
-															class="btn btn-outline-fed btn-sm"
+															className="btn btn-outline-fed btn-sm"
 															type="button"
 															title="Submit"
 															id="inputGroupFileAddon04">
