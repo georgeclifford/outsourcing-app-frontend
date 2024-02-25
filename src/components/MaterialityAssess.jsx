@@ -203,7 +203,7 @@ const MaterialityAssess = () => {
                             <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 d-flex justify-content-end gap-2" >
                                 
                                 <button className="btn btn-danger">Clear</button>
-                                <Link to="/arrangementdetails" className="btn btn-success">Save</Link>
+                                <Link to="/arrangementdetails" className="btn btn-success">Save and Next</Link>
                             </div>
             </div>
 
