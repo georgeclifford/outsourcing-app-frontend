@@ -6,7 +6,7 @@ const Footer = () => {
 	return (
 		<div>
 			<footer className="bg-fed">
-				<ul className="nav justify-content-center py-3">
+				{/* <ul className="nav justify-content-center py-3">
 					<li className="nav-item">
 						<Link to="/faqs" className="nav-link px-2 text-light">
 							FAQs
@@ -17,7 +17,7 @@ const Footer = () => {
 							About
 						</Link>
 					</li>
-				</ul>
+				</ul> */}
 				<div className="container-fluid pt-1" style={{ backgroundColor: "#f7a600" }} />
 				<p className="text-center text-light m-0 py-4">
 					&copy; 2024
@@ -27,7 +27,7 @@ const Footer = () => {
 							alt="Logo"
 							width="30"
 							height="30"
-							className="d-inline-block align-text-top mx-2"
+							className="mx-2"
 						/>
 						FEDERAL BANK
 					</Link>

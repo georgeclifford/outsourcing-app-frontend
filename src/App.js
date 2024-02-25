@@ -13,6 +13,7 @@ import OutsourcingManagement from "./components/OutsourcingManagement";
 import RiskAssessment from "./components/RiskAssessment";
 import MaterialityAssess from "./components/MaterialityAssess";
 import ArrangementDetails from "./components/ArrangementDetails";
+import FinancialOutsourcing from "./components/FinancialOutsourcing";
 
 function App() {
 	return (
@@ -24,12 +25,13 @@ function App() {
 					<Route path="/adminhome" element={<AdminHome />} />
 					<Route path="/employeedetails" element={<EmployeeDetails />} />
 					<Route path="/vendorhome" element={<VendorHome />} />
-          <Route path="/outsrcmanage" element={<OutsourcingManagement />} />
+          			<Route path="/outsrcmanage" element={<OutsourcingManagement />} />
 					<Route path="/addvendor" element={<><NavBar /> <AddVendor /> <Footer/></>} />
 					<Route path="/serviceprovider" element={<><NavBar /> <ServiceProviderDetails /> <Footer/></>} />
 					<Route path="/risk" element={<><NavBar /> <RiskAssessment /> <Footer/></>} />
 					<Route path="/materiality" element={<><NavBar /> <MaterialityAssess /> <Footer/></>} />
 					<Route path="/arrangementdetails" element={<><NavBar /> <ArrangementDetails /> <Footer/></>} />
+					<Route path="/financialoutsrc" element={<FinancialOutsourcing />} />
 				</Routes>
 			</BrowserRouter>
 		</div>
