@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Sidebar = (props) => {
+const SidebarThirdPartyOnboarding = (props) => {
 	if (props.isLarge) {
 		return (
 			<div className="sidebar bg-fed">
@@ -9,41 +9,42 @@ const Sidebar = (props) => {
 					<h4 className="m-0">Financial Outsourcing</h4>
 					<hr />
 				</div>
+
 				<ul className="nav flex-column">
 					<li className="nav-item">
-						{props.isTab === "Request Sub" ? (
+						{props.isTab === "Request Details" ? (
 							<Link className="nav-link active" to="#">
-								Request Submission
+								Request Details
 							</Link>
 						) : (
-							<Link className="nav-link" to="/financialoutsrc">
-								Request Submission
+							<Link className="nav-link" to="#">
+								Request Details
 							</Link>
 						)}
 					</li>
+
 					<li className="nav-item">
-						<Link className="nav-link" to="#">
-							Agreement Status
-						</Link>
-					</li>
-					<li className="nav-item">
-						{props.isTab === "SLA" ? (
+						{props.isTab === "Service Onboarding Approvals" ? (
 							<Link className="nav-link active" to="#">
-								SLA Upload
+								Service Approvals
 							</Link>
 						) : (
-							<Link className="nav-link" to="/slaupload">
-								SLA Upload
+							<Link className="nav-link" to="#">
+								Service Approvals
 							</Link>
 						)}
-						<Link className="nav-link" to="#">
-							SLA Upload
-						</Link>
 					</li>
+
 					<li className="nav-item">
-						<Link className="nav-link" to="#">
-							Sanction Order
-						</Link>
+						{props.isTab === "Query Management" ? (
+							<Link className="nav-link active" to="#">
+								Query Management
+							</Link>
+						) : (
+							<Link className="nav-link" to="#">
+								Query Management
+							</Link>
+						)}
 					</li>
 				</ul>
 			</div>
@@ -67,39 +68,43 @@ const Sidebar = (props) => {
 						aria-label="Close"></button>
 				</div>
 				<hr />
+
 				<div className="sidebar offcanvas-body">
 					<ul className="nav flex-column">
-						<li className="nav-item ">
-							{props.isTab === "Request Sub" ? (
+						<li className="nav-item">
+							{props.isTab === "Request Details" ? (
 								<Link className="nav-link active" to="#">
-									Request Submission
+									Request Details
 								</Link>
 							) : (
-								<Link className="nav-link" to="/financialoutsrc">
-									Request Submission
+								<Link className="nav-link" to="#">
+									Request Details
 								</Link>
 							)}
 						</li>
+
 						<li className="nav-item">
-							<Link className="nav-link" to="#">
-								Agreement Status
-							</Link>
-						</li>
-						<li className="nav-item">
-							{props.isTab === "SLA" ? (
+							{props.isTab === "Service Onboarding Approvals" ? (
 								<Link className="nav-link active" to="#">
-									SLA Upload
+									Service Approvals
 								</Link>
 							) : (
-								<Link className="nav-link" to="/slaupload">
-									SLA Upload
+								<Link className="nav-link" to="#">
+									Service Approvals
 								</Link>
 							)}
 						</li>
+
 						<li className="nav-item">
-							<Link className="nav-link" to="#">
-								Sanction Order
-							</Link>
+							{props.isTab === "Query Management" ? (
+								<Link className="nav-link active" to="#">
+									Query Management
+								</Link>
+							) : (
+								<Link className="nav-link" to="#">
+									Query Management
+								</Link>
+							)}
 						</li>
 					</ul>
 				</div>
@@ -108,4 +113,4 @@ const Sidebar = (props) => {
 	}
 };
 
-export default Sidebar;
+export default SidebarThirdPartyOnboarding;

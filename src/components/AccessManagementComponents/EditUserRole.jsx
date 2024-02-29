@@ -1,11 +1,20 @@
 import React from "react";
 
-const ChangeEmpPassword = () => {
+const EditUserRole = () => {
 	return (
 		<div className="d-inline">
+			<button
+				type="button"
+				className="btn btn-primary m-1"
+				title="Edit Employee Details"
+				data-bs-toggle="modal"
+				data-bs-target="#editEmployee">
+				<i className="bi bi-pencil"></i>
+			</button>
+
 			<div
-				className="modal fade"
-				id="changePassword"
+				className="modal fade modal"
+				id="editEmployee"
 				data-bs-backdrop="static"
 				data-bs-keyboard="false"
 				tabIndex="-1"
@@ -15,7 +24,7 @@ const ChangeEmpPassword = () => {
 					<div className="modal-content">
 						<div className="modal-header">
 							<h1 className="modal-title fs-5" id="staticBackdropLabel">
-								Change Employee Password
+								Edit User Role
 							</h1>
 							<button
 								type="button"
@@ -27,32 +36,21 @@ const ChangeEmpPassword = () => {
 						<div className="modal-body">
 							<div className="container">
 								<div className="row g-3">
-									
-									<div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-										<div className="form-floating">
-											<input
-												type="password"
-												className="form-control shadow-sm"
-												id="floatingPassword3"
-												placeholder="Password"
-											/>
-											<label htmlFor="floatingPassword3">New Password</label>
-										</div>
-									</div>
 
 									<div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
 										<div className="form-floating">
-											<input
-												type="password"
-												className="form-control shadow-sm"
-												id="floatingPassword4"
-												placeholder="Password"
-											/>
-											<label htmlFor="floatingPassword4">
-												Confirm Password
-											</label>
+											<select
+												className="form-select"
+												id="floatingSelect6"
+												aria-label="Floating label select example">
+												<option defaultValue={"all"}>All</option>
+												<option value="1">Reviewer</option>
+												<option value="2">Approver</option>
+											</select>
+											<label htmlFor="floatingSelect6">Role</label>
 										</div>
 									</div>
+
 								</div>
 							</div>
 						</div>
@@ -64,7 +62,7 @@ const ChangeEmpPassword = () => {
 								Cancel
 							</button>
 							<button type="button" className="btn btn-success">
-								Change
+								Save
 							</button>
 						</div>
 					</div>
@@ -74,4 +72,4 @@ const ChangeEmpPassword = () => {
 	);
 };
 
-export default ChangeEmpPassword;
+export default EditUserRole;

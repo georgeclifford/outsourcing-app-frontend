@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/images/federal_logo.jpg";
+import logo from "../../assets/images/federal_logo.jpg";
 
 const NavBar = (props) => {
 	return (

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import NavBar from "./NavBar";
-import Footer from "./Footer";
+import NavBar from "../CommonComponents/NavBar";
+import Footer from "../CommonComponents/Footer";
 import AddVendorSidebar from "./AddVendorSidebar";
 
 

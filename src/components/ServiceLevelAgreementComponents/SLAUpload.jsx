@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import NavBar from "./NavBar";
-import Sidebar from "./Sidebar";
+import NavBar from "../CommonComponents/NavBar";
+import Sidebar from "./CommonComponents/Sidebar";
 import { Link } from "react-router-dom";
-import Footer from "./Footer";
+import Footer from "../CommonComponents/Footer";
 
 const SLAUpload = () => {
 	const [isLargeWindow, setisLargeWindow] = useState(true); // Initially open for larger screens
