@@ -1,39 +1,59 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import NavBar from "./components/NavBar";
-import SignIn from "./components/SignIn";
-import PasswordReset from "./components/PasswordReset";
-import AdminHome from "./components/AdminHome";
-import EmployeeDetails from "./components/EmployeeDetails";
-import VendorHome from "./components/VendorHome";
-import AddVendor from "./components/AddVendor";
-import ServiceProviderDetails from "./components/ServiceProviderDetails";
-import Footer from "./components/Footer";
-import OutsourcingManagement from "./components/OutsourcingManagement";
-import RiskAssessment from "./components/RiskAssessment";
-import MaterialityAssess from "./components/MaterialityAssess";
-import ArrangementDetails from "./components/ArrangementDetails";
-import FinancialOutsourcing from "./components/FinancialOutsourcing";
-import SLAUpload from "./components/SLAUpload";
+
+import NavBar from "./components/CommonComponents/NavBar";
+import Footer from "./components/CommonComponents/Footer";
+import SignInPage from "./pages/CommonPages/SignInPage";
+import ResetPasswordPage from "./pages/CommonPages/ResetPasswordPage";
+
+import HomeAdminPage from "./pages/AdminPages/HomeAdminPage";
+import AccessManagementAdminPage from "./pages/AdminPages/AccessManagementAdminPage";
+import ThirdPartyOnboardingAdminPage from "./pages/AdminPages/ThirdPartyOnboardingAdminPage";
+
+import HomeBusinessRequestorPage from "./pages/BusinessRequestorPages/HomeBusinessRequestorPage";
+import ThirdPartyOnboardingBRPage from "./pages/BusinessRequestorPages/ThirdPartyOnboardingBRPage";
+import AccessManagementBRPage from "./pages/BusinessRequestorPages/AccessManagementBRPage";
+
+import HomeBusinessControllerPage from "./pages/BusinessControllerPages/HomeBusinessControllerPage";
+
+import VendorHome from "./components/ThirdPartyManagementComponents/VendorHome";
+import AddVendor from "./components/ThirdPartyManagementComponents/AddVendor";
+import ServiceProviderDetails from "./components/ThirdPartyManagementComponents/ServiceProviderDetails";
+import RiskAssessment from "./components/ThirdPartyManagementComponents/RiskAssessment";
+import MaterialityAssess from "./components/ThirdPartyManagementComponents/MaterialityAssess";
+import ArrangementDetails from "./components/ThirdPartyManagementComponents/ArrangementDetails";
+import ThirdPartyOnboardingBCPage from "./pages/BusinessControllerPages/ThirdPartyOnboardingBCPage";
+
 
 function App() {
 	return (
 		<div>
 			<BrowserRouter>
 				<Routes>
-					<Route path="/" element={<SignIn />} />
-					<Route path="/passwordreset" element={<PasswordReset />} />
-					<Route path="/adminhome" element={<AdminHome />} />
-					<Route path="/employeedetails" element={<EmployeeDetails />} />
+					<Route path="/" element={<SignInPage />} />
+					<Route path="/reset-password" element={<ResetPasswordPage />} />
+
+					{/* Admin Pages */}
+					<Route path="/admin/home" element={<HomeAdminPage />} />
+					<Route path="/admin/access-management" element={<AccessManagementAdminPage />} />
+					<Route path="/admin/third-party-onboarding" element={<ThirdPartyOnboardingAdminPage />} />
+
+					{/* Business Requestor Pages */}
+					<Route path="/business-requestor/home" element={<HomeBusinessRequestorPage />} />
+					<Route path="/business-requestor/third-party-onboarding" element={<ThirdPartyOnboardingBRPage />} />
+					<Route path="/business-requestor/access-management" element={<AccessManagementBRPage />} />
+
 					<Route path="/vendorhome" element={<VendorHome />} />
-          			<Route path="/outsrcmanage" element={<OutsourcingManagement />} />
 					<Route path="/addvendor" element={<><NavBar /> <AddVendor /> <Footer/></>} />
 					<Route path="/serviceprovider" element={<><NavBar /> <ServiceProviderDetails /> <Footer/></>} />
 					<Route path="/risk" element={<><NavBar /> <RiskAssessment /> <Footer/></>} />
 					<Route path="/materiality" element={<><NavBar /> <MaterialityAssess /> <Footer/></>} />
 					<Route path="/arrangementdetails" element={<><NavBar /> <ArrangementDetails /> <Footer/></>} />
-					<Route path="/financialoutsrc" element={<FinancialOutsourcing />} />
-					<Route path="/slaupload" element={<SLAUpload />} />
+
+					{/* Business Controller Pages */}
+					<Route path="/business-controller/home" element={<HomeBusinessControllerPage />} />
+					<Route path="/business-controller/third-party-onboarding" element={<ThirdPartyOnboardingBCPage />} />
+
 				</Routes>
 			</BrowserRouter>
 		</div>
