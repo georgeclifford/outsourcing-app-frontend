@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import NavBar from "../../components/CommonComponents/NavBar";
 import Footer from "../../components/CommonComponents/Footer";
 import SidebarThirdPartyOnboarding from "../../components/ThirdPartyOnboardingComponents/SidebarThirdPartyOnboarding";
 import RequestDetails from "../../components/ThirdPartyOnboardingComponents/RequestDetails";
+import BackButton from "../../components/CommonComponents/BackButton";
 
 const ThirdPartyOnboardingAdminPage = () => {
 	const [isLargeWindow, setisLargeWindow] = useState(true); // Initially open for larger screens
@@ -53,18 +53,12 @@ const ThirdPartyOnboardingAdminPage = () => {
 						<div className="container">
 							<div className="row my-3">
 								<div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-									<Link
-										className="btn btn-outline-fed btn-circle"
-										title="Go To Previous Page"
-										to={"/admin/home"}>
-										<i className="bi bi-arrow-left"></i>
-									</Link>
+									<BackButton isPath={"/admin/home"} />
 									<h4 className="text-center">Request Details</h4>
 								</div>
 							</div>
 
-                            <RequestDetails />
-							
+							<RequestDetails />
 						</div>
 					</div>
 				</div>

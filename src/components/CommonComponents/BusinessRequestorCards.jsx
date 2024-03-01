@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import employee_img from "../../assets/images/employee.jpeg";
+import third_party_onboarding_img from "../../assets/images/third-party-1.jpeg";
 
 const BusinessRequestorCards = () => {
 	return (
@@ -11,7 +12,7 @@ const BusinessRequestorCards = () => {
 					to={"/business-requestor/third-party-onboarding"}>
 					<div className="card shadow h-100">
 						<img
-							src={employee_img}
+							src={third_party_onboarding_img}
 							className="card-img-top"
 							alt="Third Party Onboarding"
 						/>
