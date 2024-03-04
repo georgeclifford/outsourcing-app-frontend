@@ -3,35 +3,57 @@ import { Navbar, Nav, Container } from 'react-bootstrap';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { useLocation } from 'react-router';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
+import Footer from './Footer';
+import NavBar from './NavBar';
 const ArrangementDetails = () => {
     const location = useLocation();
-  return (
-    <div>
-        <Navbar bg="light" expand="lg">
-                <Container>
-                    <Navbar.Brand >
+    const isActive = (path) => location.pathname === path;
+    return (
+        <div className="d-flex flex-column min-vh-100" >
+            <NavBar isLogin={true} />
+            <div class="container">
 
-                        <div className="d-flex align-items-center">
-                            <Link to="/vendorhome" style={{ textDecoration: 'none', color: 'inherit' }}>
-                                <FontAwesomeIcon icon={faHome} style={{ color: "#f7a600", marginRight: '20px' }} title='Home' /></Link>
-                            <span style={{ color: "#01468e", marginRight: '50px' }}><h4><b>ADD VENDOR</b></h4></span>
-                        </div>
+                <br />
+                <nav class="custom-breadcrumb" aria-label="breadcrumb">
 
-                    </Navbar.Brand>
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                    <Navbar.Collapse id="basic-navbar-nav">
-                        <Nav className="me-auto">
-                            <Nav.Link href="/addvendor"><b>Communication Details</b></Nav.Link>
-                            <Nav.Link href="/serviceprovider" ><b>Service Provider Details</b></Nav.Link>
-                            <Nav.Link href="/riskdetails"><b>Risk/Materiality Assessment</b></Nav.Link>
-                            <Nav.Link href="/arrangementdetails" className={location.pathname === "/arrangementdetails" ? "active" : ""} style={{ color: location.pathname === "/arrangementdetails" ? "green" : "" }}><b>Arrangement Details</b></Nav.Link>
-                            <Nav.Link href="/esg"><b>ESG</b></Nav.Link>
-                            <Nav.Link href="/documentdetails"><b>Document Details</b></Nav.Link>
-                        </Nav>
-                    </Navbar.Collapse>
-                </Container>
-            </Navbar>
+                    <ol class="breadcrumb" id="breadcrumb">
+                        <Link
+                            className="btn btn-outline-fed"
+                            title="Go To Previous Page"
+                            to={"/materiality"}>
+                            <i className="bi bi-arrow-left" ></i>
+                        </Link>
+                        <li class="breadcrumb-item">
+                            <span class="breadcrumb-number" style={{ marginLeft: '20px' }}>1</span>
+                            <a href="#">Communication Details</a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <span class="breadcrumb-number">2</span>
+                            <a href="#">Service Provider Details</a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <span class="breadcrumb-number">3</span>
+                            <a href="#">Risk/Materiality Assessment</a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <span class="breadcrumb-number">4</span>
+                            <NavLink
+                                to="/arrangementdetails"
+                                isActive={() => isActive("/arrangementdetails")}
+                                activeClassName="active"
+                            >
+                                Arrangement Details
+                            </NavLink>
+                            <a href="#"></a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <span class="breadcrumb-number">5</span>
+                            <a href="#">Document Details</a>
+                        </li>
+                    </ol>
+                </nav>
+            </div>
             <br /> <br />
 
             <div className="container mb-5">
@@ -81,15 +103,15 @@ const ArrangementDetails = () => {
                                             No
                                         </label>
                                     </div>
+                                </div>
                             </div>
-                            </div>
-                           
-                            
-                            
-                            
-                            
-                            
-                            
+
+
+
+
+
+
+
                             <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                                 <label htmlFor="" className="form label">Whether the proposed activity is related to any critical process</label>
                                 <div id="radioOptions" className="d-flex flex-row">
@@ -105,7 +127,7 @@ const ArrangementDetails = () => {
                                             No
                                         </label>
                                     </div>
-                            </div>
+                                </div>
                             </div>
 
                             <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
@@ -123,7 +145,7 @@ const ArrangementDetails = () => {
                                             No
                                         </label>
                                     </div>
-                            </div>
+                                </div>
                             </div>
                             <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                                 <label htmlFor="" className="form label">Whether the Service Provider provides the same services to any other Banks/Financial Institutions</label>
@@ -140,7 +162,7 @@ const ArrangementDetails = () => {
                                             No
                                         </label>
                                     </div>
-                            </div>
+                                </div>
                             </div>
                             <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                                 <label htmlFor="" className="form label">Whether the proposed arrangement is IT Outsourcing</label>
@@ -157,7 +179,7 @@ const ArrangementDetails = () => {
                                             No
                                         </label>
                                     </div>
-                            </div>
+                                </div>
                             </div>
                             <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                                 <label htmlFor="" className="form label">Customer details/any critical or sensitive data are shared with the Service Provider as part of this arrangement</label>
@@ -174,11 +196,11 @@ const ArrangementDetails = () => {
                                             No
                                         </label>
                                     </div>
+                                </div>
                             </div>
-                            </div>
-                            
-                            
-                            
+
+
+
                             <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                                 <label htmlFor="" className="form label">Whether this arrangement involves any engagement of resources at Banks premises</label>
                                 <div id="radioOptions" className="d-flex flex-row">
@@ -194,8 +216,8 @@ const ArrangementDetails = () => {
                                             No
                                         </label>
                                     </div>
+                                </div>
                             </div>
-                            </div> 
                             <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                                 <label htmlFor="" className="form label">Type of access for the ServiceProvider to critical data/info</label>
                                 <select className="form-control" name="">
@@ -205,21 +227,22 @@ const ArrangementDetails = () => {
                                     <option value="L2">L2</option>
                                     <option value="L3">L3</option>
                                 </select>
-                            </div> 
-                            
+                            </div>
+
                             <br />
                             <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 d-flex justify-content-end gap-2" >
-                                
+
                                 <button className="btn btn-danger">Clear</button>
-                                <Link to="/esg" className="btn btn-success">Save</Link>
+                                <Link to="/docdetails" className="btn btn-success">Save and Next</Link>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <Footer />
 
-    </div>
-  )
+        </div>
+    )
 }
 
 export default ArrangementDetails

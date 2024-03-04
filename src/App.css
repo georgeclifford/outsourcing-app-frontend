@@ -50,7 +50,7 @@
 }
 
 .active {
-	color: green !important;
+	color: #00468e !important;
 }
 
 .text-fed {
@@ -116,3 +116,56 @@
 	background-color: #002347;
 	border-left: 5px solid #f7a600;
 }
+.custom-breadcrumb .breadcrumb {
+	background-color: #fff;
+	padding: 10px;
+	border-radius: 5px;
+  }
+  
+  .custom-breadcrumb .breadcrumb-item {
+	display: flex;
+	align-items: center;
+  }
+  
+  .custom-breadcrumb .breadcrumb-number {
+	background-color: #00468e;
+	color: #fff;
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 10px;
+	font-weight: bold;
+  }
+  
+  .custom-breadcrumb .breadcrumb-item:not(:last-child)::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: calc(100% + 5px);
+	height: 2px;
+	width: 50px;
+	background-color: #00468e;
+  }
+  
+  .custom-breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+	content: "";
+	margin-right: 0; /* Remove the margin between items */
+  }
+  .custom-breadcrumb .breadcrumb-item a {
+	text-decoration: none;
+	color: #00468e;
+	font-size: large;
+
+  }
+  
+  .custom-breadcrumb .breadcrumb-item .active  {
+	border: 2px solid #00468e; /* Set the border color to blue */
+	border-radius: 20px; /* Optional: Add border radius for better appearance */
+	padding: 0.3rem 0.5rem; /* Adjust padding to make the circle closer to the text */
+    margin: 0 -0.25rem; /* Adjust margin to make the circle closer to the text */
+  }
+  

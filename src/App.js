@@ -15,6 +15,7 @@ import MaterialityAssess from "./components/MaterialityAssess";
 import ArrangementDetails from "./components/ArrangementDetails";
 import FinancialOutsourcing from "./components/FinancialOutsourcing";
 import SLAUpload from "./components/SLAUpload";
+import DocumentDetails from "./components/DocumentDetails";
 
 function App() {
 	return (
@@ -27,13 +28,15 @@ function App() {
 					<Route path="/employeedetails" element={<EmployeeDetails />} />
 					<Route path="/vendorhome" element={<VendorHome />} />
           			<Route path="/outsrcmanage" element={<OutsourcingManagement />} />
-					<Route path="/addvendor" element={<><NavBar /> <AddVendor /> <Footer/></>} />
-					<Route path="/serviceprovider" element={<><NavBar /> <ServiceProviderDetails /> <Footer/></>} />
-					<Route path="/risk" element={<><NavBar /> <RiskAssessment /> <Footer/></>} />
-					<Route path="/materiality" element={<><NavBar /> <MaterialityAssess /> <Footer/></>} />
-					<Route path="/arrangementdetails" element={<><NavBar /> <ArrangementDetails /> <Footer/></>} />
+					<Route path="/addvendor" element={ <AddVendor /> } />
+					<Route path="/serviceprovider" element={ <ServiceProviderDetails /> } />
+					<Route path="/risk" element={ <RiskAssessment /> } />
+					<Route path="/materiality" element={ <MaterialityAssess />} />
+					<Route path="/arrangementdetails" element={<ArrangementDetails />} />
 					<Route path="/financialoutsrc" element={<FinancialOutsourcing />} />
 					<Route path="/slaupload" element={<SLAUpload />} />
+					<Route path="/docdetails" element={<DocumentDetails />} />
+					
 				</Routes>
 			</BrowserRouter>
 		</div>

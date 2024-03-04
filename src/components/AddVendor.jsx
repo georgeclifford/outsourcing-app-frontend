@@ -3,35 +3,59 @@ import { Navbar, Nav, Container } from 'react-bootstrap';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { useLocation } from 'react-router';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
+import NavBar from './NavBar';
+import Footer from './Footer';
 
 const AddVendor = () => {
     const location = useLocation();
+    const isActive = (path) => location.pathname === path;
     return (
-        <div>
+        <div className="d-flex flex-column min-vh-100" >
+            <NavBar isLogin={true} />
+            <div class="container">
 
-            <Navbar bg="light" expand="lg">
-                <Container>
-                    <Navbar.Brand href="/vendorhome">
-                        <div className="d-flex align-items-center">
+                <br />
+                <nav class="custom-breadcrumb" aria-label="breadcrumb">
 
-                            <FontAwesomeIcon icon={faHome} style={{ color: "#f7a600", marginRight: '20px' }} title='Home' />
-                            <span style={{ color: "#01468e", marginRight: '50px' }}><h4><b>ADD VENDOR</b></h4></span>
-                        </div>
-                    </Navbar.Brand>
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                    <Navbar.Collapse id="basic-navbar-nav">
-                        <Nav className="me-auto">
-                            <Nav.Link href="/addvendor" className={location.pathname === "/addvendor" ? "active" : ""} style={{ color: location.pathname === "/addvendor" ? "green" : "" }} ><b>Communication Details</b></Nav.Link>
-                            <Nav.Link href="/serviceprovider"><b>Service Provider</b></Nav.Link>
-                            <Nav.Link href="/risk"><b>Risk/Materiality Assessment</b></Nav.Link>
-                            <Nav.Link href="/arrangementdetails"><b>Arrangement Details</b></Nav.Link>
-                            <Nav.Link href="/esg"><b>ESG</b></Nav.Link>
-                            <Nav.Link href="/documentdetails"><b>Document Details</b></Nav.Link>
-                        </Nav>
-                    </Navbar.Collapse>
-                </Container>
-            </Navbar>
+                    <ol class="breadcrumb" id="breadcrumb">
+                        <Link
+                            className="btn btn-outline-fed"
+                            title="Go To Previous Page"
+                            to={"/vendorhome"}>
+                            <i className="bi bi-arrow-left" ></i>
+                        </Link>
+                        <li class="breadcrumb-item">
+                            <span class="breadcrumb-number" style={{ marginLeft: '20px' }}>1</span>
+                            <NavLink
+                                to="/addvendor"
+                                isActive={() => isActive("/addvendor")}
+                                activeClassName="active"
+                            >
+                                Communication Details
+                            </NavLink>
+
+                        </li>
+                        <li class="breadcrumb-item">
+                            <span class="breadcrumb-number">2</span>
+                            <a href="#">Service Provider Details</a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <span class="breadcrumb-number">3</span>
+                            <a href="#">Risk/Materiality Assessment</a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <span class="breadcrumb-number">4</span>
+                            <a href="#">Arrangement Details</a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <span class="breadcrumb-number">5</span>
+                            <a href="#">Document Details</a>
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+
             <br /> <br />
 
             <div className="container mb-5">
@@ -132,6 +156,7 @@ const AddVendor = () => {
                     </div>
                 </div>
             </div>
+            <Footer/>
         </div>
 
     );
