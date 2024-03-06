@@ -1,8 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 
-import NavBar from "./components/CommonComponents/NavBar";
-import Footer from "./components/CommonComponents/Footer";
 import SignInPage from "./pages/CommonPages/SignInPage";
 import ResetPasswordPage from "./pages/CommonPages/ResetPasswordPage";
 
@@ -23,6 +21,7 @@ import RiskAssessment from "./components/ThirdPartyManagementComponents/RiskAsse
 import MaterialityAssess from "./components/ThirdPartyManagementComponents/MaterialityAssess";
 import ArrangementDetails from "./components/ThirdPartyManagementComponents/ArrangementDetails";
 import ThirdPartyOnboardingBCPage from "./pages/BusinessControllerPages/ThirdPartyOnboardingBCPage";
+import DocumentDetails from "./components/ThirdPartyManagementComponents/DocumentDetails";
 
 
 function App() {
@@ -43,12 +42,13 @@ function App() {
 					<Route path="/business-requestor/third-party-onboarding" element={<ThirdPartyOnboardingBRPage />} />
 					<Route path="/business-requestor/access-management" element={<AccessManagementBRPage />} />
 
-					<Route path="/vendorhome" element={<VendorHome />} />
-					<Route path="/addvendor" element={<><NavBar /> <AddVendor /> <Footer/></>} />
-					<Route path="/serviceprovider" element={<><NavBar /> <ServiceProviderDetails /> <Footer/></>} />
-					<Route path="/risk" element={<><NavBar /> <RiskAssessment /> <Footer/></>} />
-					<Route path="/materiality" element={<><NavBar /> <MaterialityAssess /> <Footer/></>} />
-					<Route path="/arrangementdetails" element={<><NavBar /> <ArrangementDetails /> <Footer/></>} />
+					<Route path="/business-requestor/third-party-management" element={<VendorHome />} />
+					<Route path="/addvendor" element={ <AddVendor /> } />
+					<Route path="/serviceprovider" element={ <ServiceProviderDetails /> } />
+					<Route path="/risk" element={ <RiskAssessment /> } />
+					<Route path="/materiality" element={ <MaterialityAssess />} />
+					<Route path="/arrangementdetails" element={<ArrangementDetails />} />
+					<Route path="/docdetails" element={<DocumentDetails />} />
 
 					{/* Business Controller Pages */}
 					<Route path="/business-controller/home" element={<HomeBusinessControllerPage />} />

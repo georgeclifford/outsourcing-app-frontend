@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import NavBar from "../CommonComponents/NavBar";
-import Footer from "../CommonComponents/Footer";
 import AddVendorSidebar from "./AddVendorSidebar";
-
+import Footer from "../CommonComponents/Footer";
 
 const VendorHome = () => {
 	const [isLargeWindow, setisLargeWindow] = useState(true); // Initially open for larger screens
@@ -31,10 +30,10 @@ const VendorHome = () => {
 	}, []);
 	return (
 		<div className="d-flex flex-column min-vh-100">
-			<NavBar isLogin={true} isSidebar={true}/>
+			<NavBar isLogin={true} isSidebar={true} />
 			<div className="container-fluid flex-fill">
 				<div className="row">
-				<div className="col-lg-2 col-xl-2 col-xxl-2 p-0 shadow">
+					<div className="col-lg-2 col-xl-2 col-xxl-2 p-0 shadow">
 						{window.innerWidth < 992 ? (
 							// Render offcanvas sidebar for smaller screens
 							<AddVendorSidebar
@@ -49,7 +48,7 @@ const VendorHome = () => {
 					{/* Main Content */}
 					<main className="col-md-10">
 						<div className="container">
-						<div className="row my-3">
+							<div className="row my-3">
 								<div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
 									<Link
 										className="btn btn-outline-fed"
@@ -57,15 +56,15 @@ const VendorHome = () => {
 										to={"/adminhome"}>
 										<i className="bi bi-arrow-left"></i>
 									</Link>
-									<h2 className="text-center"style={{ color: "#01468e" }}><b>VENDOR MANAGEMENT</b></h2>
+									<h2 className="text-center" style={{ color: "#01468e" }}>
+										<b>VENDOR MANAGEMENT</b>
+									</h2>
 								</div>
 							</div>
 							<br />
 							<div className="row">
 								<div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
-									
 									<br />
-							
 
 									<div className="row g-3 mb-3 justify-content-between">
 										<div className="col col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
@@ -275,39 +274,43 @@ const VendorHome = () => {
 							</div>
 						</div>
 						<div className="col-md-10 mx-auto mt-3 d-flex justify-content-end">
-						<nav aria-label="Page navigation example">
-							<ul className="pagination">
-								<li className="page-item">
-									<Link className="page-link text-fed" 
-									to="#" aria-label="Previous">
-										<span aria-hidden="true">&laquo;</span>
-									</Link>
-								</li>
-								<li className="page-item">
-									<Link className="page-link btn-fed" to="#">
-										1
-									</Link>
-								</li>
-								<li className="page-item">
-									<Link className="page-link text-fed" to="#">
-										2
-									</Link>
-								</li>
-								<li className="page-item">
-									<Link className="page-link text-fed" to="#">
-										3
-									</Link>
-								</li>
-								<li className="page-item">
-									<Link className="page-link text-fed" to="#" aria-label="Next">
-										<span aria-hidden="true">&raquo;</span>
-									</Link>
-								</li>
-							</ul>
-						</nav>
-					</div>
+							<nav aria-label="Page navigation example">
+								<ul className="pagination">
+									<li className="page-item">
+										<Link
+											className="page-link text-fed"
+											to="#"
+											aria-label="Previous">
+											<span aria-hidden="true">&laquo;</span>
+										</Link>
+									</li>
+									<li className="page-item">
+										<Link className="page-link btn-fed" to="#">
+											1
+										</Link>
+									</li>
+									<li className="page-item">
+										<Link className="page-link text-fed" to="#">
+											2
+										</Link>
+									</li>
+									<li className="page-item">
+										<Link className="page-link text-fed" to="#">
+											3
+										</Link>
+									</li>
+									<li className="page-item">
+										<Link
+											className="page-link text-fed"
+											to="#"
+											aria-label="Next">
+											<span aria-hidden="true">&raquo;</span>
+										</Link>
+									</li>
+								</ul>
+							</nav>
+						</div>
 					</main>
-					
 				</div>
 			</div>
 			<Footer />
