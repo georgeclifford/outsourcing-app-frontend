@@ -1,7 +1,4 @@
 import React from 'react';
-import { Navbar, Nav, Container } from 'react-bootstrap';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { useLocation } from 'react-router';
 import { Link, NavLink } from 'react-router-dom';
 import NavBar from './NavBar';

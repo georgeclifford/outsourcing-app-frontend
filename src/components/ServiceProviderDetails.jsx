@@ -1,7 +1,4 @@
 import React from 'react'
-import { Navbar, Nav, Container } from 'react-bootstrap';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { useLocation } from 'react-router';
 import { Link, NavLink } from 'react-router-dom';
 import NavBar from './NavBar';
@@ -416,8 +413,6 @@ const ServiceProviderDetails = () => {
                                     </div>
                                 </div>
                             </div>
-
-
                             <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                                 <label htmlFor="" className="form label">Whether extemal factors like political, economic, social and legal environment of the jurisdiction and other events that may impact the service delivery are evaluated</label>
                                 <div id="radioOptions" className="d-flex flex-row">
@@ -486,7 +481,6 @@ const ServiceProviderDetails = () => {
                                     </div>
                                 </div>
                             </div>
-
                             <br />
                             <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 d-flex justify-content-end gap-2" >
 

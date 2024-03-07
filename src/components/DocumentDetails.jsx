@@ -102,8 +102,6 @@ const DocumentDetails = () => {
             </div>
             <Footer className="mt-auto"/>
         </div>
-       
-
     )
 }
 

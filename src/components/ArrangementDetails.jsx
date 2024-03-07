@@ -1,7 +1,4 @@
 import React from 'react'
-import { Navbar, Nav, Container } from 'react-bootstrap';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { useLocation } from 'react-router';
 import { Link, NavLink } from 'react-router-dom';
 import Footer from './Footer';
@@ -105,13 +102,6 @@ const ArrangementDetails = () => {
                                     </div>
                                 </div>
                             </div>
-
-
-
-
-
-
-
                             <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                                 <label htmlFor="" className="form label">Whether the proposed activity is related to any critical process</label>
                                 <div id="radioOptions" className="d-flex flex-row">
@@ -198,9 +188,6 @@ const ArrangementDetails = () => {
                                     </div>
                                 </div>
                             </div>
-
-
-
                             <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                                 <label htmlFor="" className="form label">Whether this arrangement involves any engagement of resources at Banks premises</label>
                                 <div id="radioOptions" className="d-flex flex-row">
@@ -228,7 +215,6 @@ const ArrangementDetails = () => {
                                     <option value="L3">L3</option>
                                 </select>
                             </div>
-
                             <br />
                             <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 d-flex justify-content-end gap-2" >
 

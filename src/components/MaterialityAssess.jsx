@@ -1,8 +1,5 @@
 import React from 'react'
 import { NavLink, useLocation } from 'react-router-dom';
-import { Navbar, Nav, Container } from 'react-bootstrap';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { Link } from 'react-router-dom';
 import NavBar from './NavBar';
 import Footer from './Footer';
@@ -41,7 +38,6 @@ const MaterialityAssess = () => {
                             >
                                 Risk/Materiality Assessment
                             </NavLink>
-
                         </li>
                         <li class="breadcrumb-item">
                             <span class="breadcrumb-number">4</span>
