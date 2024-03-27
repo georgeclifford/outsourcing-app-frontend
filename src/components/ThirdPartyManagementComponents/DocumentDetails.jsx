@@ -93,7 +93,7 @@ const DocumentDetails = () => {
 								</div>
 								<div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 d-flex justify-content-end gap-2">
 									<button className="btn btn-success">Upload</button>
-									<Link to="/vendorhome" className="btn btn-primary">
+									<Link to="/business-requestor/third-party-management" className="btn btn-primary">
 										Finish
 									</Link>
 								</div>

@@ -17,7 +17,7 @@ const AddVendor = () => {
 						<Link
 							className="btn btn-outline-fed"
 							title="Go To Previous Page"
-							to={"/vendorhome"}>
+							to={"/business-requestor/third-party-management"}>
 							<i className="bi bi-arrow-left"></i>
 						</Link>
 						<li class="breadcrumb-item">

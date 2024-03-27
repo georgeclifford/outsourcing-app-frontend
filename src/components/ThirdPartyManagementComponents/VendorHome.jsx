@@ -53,7 +53,7 @@ const VendorHome = () => {
 									<Link
 										className="btn btn-outline-fed"
 										title="Go To Previous Page"
-										to={"/adminhome"}>
+										to={"/business-requestor/home"}>
 										<i className="bi bi-arrow-left"></i>
 									</Link>
 									<h2 className="text-center" style={{ color: "#01468e" }}>
