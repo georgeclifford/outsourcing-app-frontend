@@ -1,7 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import employee_img from "../../assets/images/employee.jpeg";
-import third_party_onboarding_img from "../../assets/images/third-party-1.jpeg";
+import third_party_onboarding_img from "../../assets/images/third-party-onboard.jpeg";
+import sla_img from "../../assets/images/agreement.jpeg";
+import third_party_management_img from "../../assets/images/third-party-manage.jpeg";
+import regulatory_reporting_img from "../../assets/images/regulatory.jpeg";
+import periodic_risk_assessment_img from "../../assets/images/report.jpeg";
+import access_management_img from "../../assets/images/access-manage.jpeg";
+import performance_management_img from "../../assets/images/performance.jpeg";
+import task_management_img from "../../assets/images/task_manage.jpeg";
+import help_img from "../../assets/images/help.jpeg";
 
 const BusinessRequestorCards = () => {
 	return (
@@ -29,7 +36,7 @@ const BusinessRequestorCards = () => {
 					to={"/business-requestor/service-level-agreement"}>
 					<div className="card shadow h-100">
 						<img
-							src={employee_img}
+							src={sla_img}
 							className="card-img-top"
 							alt="Service Level Agreement"
 						/>
@@ -45,7 +52,7 @@ const BusinessRequestorCards = () => {
 				className="link-offset-2 link-underline link-underline-opacity-0"
 				to={"/business-requestor/third-party-management"}>
 				<div className="card shadow h-100">
-					<img src={employee_img} className="card-img-top" alt="Third Party Management" />
+					<img src={third_party_management_img} className="card-img-top" alt="Third Party Management" />
 					<div className="card-body">
 						<h5 className="card-title text-center">Third Party Management</h5>
 					</div>
@@ -59,7 +66,7 @@ const BusinessRequestorCards = () => {
 					to={"/business-requestor/regulatory-reporting"}>
 					<div className="card shadow h-100">
 						<img
-							src={employee_img}
+							src={regulatory_reporting_img}
 							className="card-img-top"
 							alt="Regulatory Reporting"
 						/>
@@ -76,7 +83,7 @@ const BusinessRequestorCards = () => {
 					to={"/business-requestor/periodic-risk-assessment"}>
 					<div className="card shadow h-100">
 						<img
-							src={employee_img}
+							src={periodic_risk_assessment_img}
 							className="card-img-top"
 							alt="Periodic Risk Assessment"
 						/>
@@ -92,7 +99,7 @@ const BusinessRequestorCards = () => {
 					className="link-offset-2 link-underline link-underline-opacity-0"
 					to={"/business-requestor/access-management"}>
 					<div className="card shadow h-100">
-						<img src={employee_img} className="card-img-top" alt="Access Management" />
+						<img src={access_management_img} className="card-img-top" alt="Access Management" />
 						<div className="card-body">
 							<h5 className="card-title text-center">Access Management</h5>
 						</div>
@@ -106,7 +113,7 @@ const BusinessRequestorCards = () => {
 					to={"/business-requestor/performance-management"}>
 					<div className="card shadow h-100">
 						<img
-							src={employee_img}
+							src={performance_management_img}
 							className="card-img-top"
 							alt="Performance Management"
 						/>
@@ -123,7 +130,7 @@ const BusinessRequestorCards = () => {
 					to={"/business-requestor/task-management"}>
 					<div className="card shadow h-100">
 						<img
-							src={employee_img}
+							src={task_management_img}
 							className="card-img-top"
 							alt="Task Management"
 						/>
@@ -140,7 +147,7 @@ const BusinessRequestorCards = () => {
 					to={"/business-requestor/help"}>
 					<div className="card shadow h-100">
 						<img
-							src={employee_img}
+							src={help_img}
 							className="card-img-top"
 							alt="Help"
 						/>

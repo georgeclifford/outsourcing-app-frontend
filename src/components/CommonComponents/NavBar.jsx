@@ -39,7 +39,7 @@ const NavBar = (props) => {
 								aria-expanded="false">
 								<i className="bi bi-person-circle h4"></i>
 							</button>
-							<ul className="dropdown-menu dropdown-menu-end">
+							<ul className="dropdown-menu dropdown-menu-end dropdown-menu-dark">
 								<li>
 									<button className="dropdown-item" type="button">
 										Logout

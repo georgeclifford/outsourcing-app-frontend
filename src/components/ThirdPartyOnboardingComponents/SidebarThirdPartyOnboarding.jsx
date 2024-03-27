@@ -5,8 +5,37 @@ const SidebarThirdPartyOnboarding = (props) => {
 	if (props.isLarge) {
 		return (
 			<div className="sidebar bg-fed">
-				<div className="text-light px-3 pt-3">
-					<h4 className="m-0">Financial Outsourcing</h4>
+				<div className="text-light px-3 pt-3 h4">
+					<Link
+						className="nav-link"
+						to="#"
+						role="button"
+						data-bs-toggle="dropdown"
+						aria-expanded="false">
+						Financial Outsourcing <i class="bi bi-caret-down-fill h6"></i>
+					</Link>
+					<ul className="dropdown-menu dropdown-menu-dark">
+						<li>
+							<Link className="dropdown-item" to="#">
+								Financial Outsourcing
+							</Link>
+						</li>
+						<li>
+							<Link className="dropdown-item" to="#">
+								IT Outsourcing
+							</Link>
+						</li>
+						<li>
+							<Link className="dropdown-item" to="#">
+								Security Outsourcing
+							</Link>
+						</li>
+						<li>
+							<Link className="dropdown-item" to="#">
+								Housekeeping Outsourcing
+							</Link>
+						</li>
+					</ul>
 					<hr />
 				</div>
 
@@ -57,13 +86,40 @@ const SidebarThirdPartyOnboarding = (props) => {
 				tabIndex="-1"
 				id="sidebar"
 				aria-labelledby="sidebarLabel">
-				<div className="offcanvas-header">
-					<h4 className="offcanvas-title pt-3" id="sidebarLabel">
-						Financial Outsourcing
-					</h4>
+				<div className="offcanvas-header h4">
+					<Link
+						className="nav-link"
+						to="#"
+						role="button"
+						data-bs-toggle="dropdown"
+						aria-expanded="false">
+						Financial Outsourcing <i class="bi bi-caret-down-fill h6"></i>
+					</Link>
+					<ul className="dropdown-menu">
+						<li>
+							<Link className="dropdown-item" to="#">
+								Financial Outsourcing
+							</Link>
+						</li>
+						<li>
+							<Link className="dropdown-item" to="#">
+								IT Outsourcing
+							</Link>
+						</li>
+						<li>
+							<Link className="dropdown-item" to="#">
+								Security Outsourcing
+							</Link>
+						</li>
+						<li>
+							<Link className="dropdown-item" to="#">
+								Housekeeping Outsourcing
+							</Link>
+						</li>
+					</ul>
 					<button
 						type="button"
-						className="btn-close text-reset d-lg-none"
+						className="btn-close text-reset d-lg-none h6"
 						data-bs-dismiss="offcanvas"
 						aria-label="Close"></button>
 				</div>

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import employee_img from "../../assets/images/employee.jpeg";
+import third_party_onboarding_img from "../../assets/images/third-party-onboard.jpeg";
+import access_management_img from "../../assets/images/access-manage.jpeg";
 
 const AdminCards = () => {
 	return (
@@ -11,7 +12,7 @@ const AdminCards = () => {
 					to={"/admin/third-party-onboarding"}>
 					<div className="card shadow h-100">
 						<img
-							src={employee_img}
+							src={third_party_onboarding_img}
 							className="card-img-top"
 							alt="Third Party Onboarding"
 						/>
@@ -27,7 +28,7 @@ const AdminCards = () => {
 					className="link-offset-2 link-underline link-underline-opacity-0"
 					to={"/admin/access-management"}>
 					<div className="card shadow h-100">
-						<img src={employee_img} className="card-img-top" alt="Access Management" />
+						<img src={access_management_img} className="card-img-top" alt="Access Management" />
 						<div className="card-body">
 							<h5 className="card-title text-center">Access Management</h5>
 						</div>
